@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Nayesska 💖</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:linear-gradient(135deg,#ff758c,#ff7eb3);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+color:white;
+text-align:center;
+}
+
+.container{
+background:white;
+color:#333;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+button{
+padding:12px 25px;
+margin:10px;
+border:none;
+border-radius:10px;
+font-size:18px;
+cursor:pointer;
+}
+
+#yes{
+background:#ff4d6d;
+color:white;
+}
+
+#no{
+background:gray;
+color:white;
+position:relative;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h2>¿Quieres ser mi San Valentín? 💖</h2>
+<button id="yes">Sí ✨</button>
+<button id="no">No 😢</button>
+</div>
+
+<script>
+const noBtn=document.getElementById("no");
+const yesBtn=document.getElementById("yes");
+
+noBtn.addEventListener("click",()=>{
+const x=Math.random()*(window.innerWidth-100);
+const y=Math.random()*(window.innerHeight-50);
+noBtn.style.position="absolute";
+noBtn.style.left=x+"px";
+noBtn.style.top=y+"px";
+});
+
+yesBtn.addEventListener("click",()=>{
+document.body.innerHTML=`
+<h1>🌹 Muchas gracias mi amor 🌹</h1>
+<h2>Te amo mucho <33</h2>
+`;
+});
+</script>
+
+</body>
+</html>
